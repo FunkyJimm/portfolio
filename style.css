@@ -1,0 +1,1556 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: "Lato", sans-serif;
+  color: #fffff0;
+  background-color: #202020;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.app {
+  max-width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  --first-color: #101010;
+  --secondary-color: #9e5f00;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--secondary-color);
+  transition: width 0.4s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  transition: width 0.2s;
+}
+
+.text-link {
+  display: block;
+  font-size: 100%;
+  transition: font-size 0.2s;
+}
+
+.text-link:hover {
+  font-size: 120%;
+  transition: font-size 0.4s;
+}
+
+/* Małe ekrany */
+
+@media (orientation: portrait) and (min-width: 360px) {
+  header {
+    position: fixed;
+    box-sizing: border-box;
+    min-width: 360px;
+    height: 60px;
+    padding: 5px;
+    background-color: var(--first-color);
+    box-shadow: 0 10px 25px #000;
+    z-index: 1;
+  }
+
+  header nav {
+    width: 100%;
+    min-height: 640px;
+  }
+
+  header ul {
+    clear: both;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 60px;
+    left: -100%;
+    font-size: 24px;
+    font-weight: bold;
+    background: rgba(10, 10, 10, 0.9);
+    text-align: center;
+    text-transform: uppercase;
+    list-style: none;
+    transition: all 0.5s;
+  }
+
+  header ul li {
+    display: block;
+    position: relative;
+    padding: 6%;
+    top: 15%;
+  }
+
+  header ul li img {
+    width: 16%;
+  }
+
+  #check:checked ~ ul {
+    left: 0;
+  }
+
+  .title {
+    width: 100%;
+  }
+
+  .title span {
+    float: left;
+    position: relative;
+    left: 14px;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 2;
+  }
+
+  .checkbtn {
+    float: right;
+    position: relative;
+    right: 14px;
+    font-size: 32px;
+    color: #fff;
+    line-height: 1.5;
+    cursor: pointer;
+  }
+
+  #check {
+    display: none;
+  }
+
+  .home {
+    position: relative;
+    width: 100%;
+    height: 580px;
+    top: 60px;
+    background-image: url("images/home_vertical.jpg");
+    background-size: cover;
+    background-position-y: -60px;
+  }
+
+  .container {
+    position: relative;
+    width: 90%;
+    height: 64%;
+    top: 100px;
+    margin-left: 18px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 50px #000;
+  }
+
+  .home h1 {
+    position: absolute;
+    top: 140px;
+    left: 70px;
+    font-size: 18px;
+    font-weight: normal;
+    text-shadow: 1px 1px 4px #000;
+    text-align: center;
+  }
+
+  .home h2 {
+    position: absolute;
+    width: 90%;
+    top: 176px;
+    left: 16px;
+    font-size: 28px;
+    font-weight: normal;
+    text-shadow: 1px 1px 4px #000;
+    text-align: center;
+  }
+
+  .home h3 {
+    position: absolute;
+    width: 85%;
+    top: 324px;
+    left: 26px;
+    font-size: 16px;
+    font-weight: normal;
+    text-shadow: 1px 1px 4px #000;
+    text-align: center;
+  }
+
+  .home a {
+    position: absolute;
+    top: 418px;
+    left: 134px;
+    color: var(--secondary-color);
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    text-shadow: 1px 1px 4px #000;
+  }
+
+  .about {
+    min-height: 580px;
+    background-color: #000;
+  }
+
+  .about h1 {
+    position: absolute;
+    width: 100%;
+    margin-top: 80px;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .about p {
+    position: absolute;
+    width: 90%;
+    margin-top: 132px;
+    margin-left: 17px;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: justify;
+    text-indent: 30px;
+    line-height: 1.4;
+  }
+
+  .special {
+    color: var(--secondary-color);
+    font-weight: bold;
+  }
+
+  .about img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-top: 690px;
+  }
+
+  .projects {
+    min-height: 580px;
+    background-color: #000;
+  }
+
+  .projects-header {
+    width: 100%;
+    height: 30px;
+    padding-bottom: 10px;
+  }
+
+  .projects h1 {
+    position: absolute;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .project {
+    padding-top: 10px;
+    background-color: #000;
+  }
+
+  .projects .project:nth-child(odd) {
+    background-color: #101010;
+  }
+
+  .projects-content {
+    width: 100%;
+  }
+
+  .projects h2 {
+    position: relative;
+    top: -10px;
+    padding: 20px;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .orange-underline {
+    position: relative;
+    width: 240px;
+    height: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    top: -20px;
+    background-color: var(--secondary-color);
+  }
+
+  .projects p {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
+    text-align: justify;
+    text-indent: 10px;
+    line-height: 1.2;
+  }
+
+  .picture {
+    position: relative;
+    width: 100%;
+    top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .project img {
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  footer {
+    min-height: 580px;
+    background-color: var(--secondary-color);
+  }
+
+  .contact {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: 440px;
+    top: 70px;
+    text-align: center;
+    background-color: #000;
+  }
+
+  .contact h1 {
+    position: relative;
+    top: 160px;
+    font-weight: bold;
+  }
+
+  .contact h2 {
+    position: relative;
+    top: 170px;
+    font-weight: normal;
+  }
+
+  footer p {
+    position: relative;
+    display: block;
+    bottom: -90px;
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 375px) {
+  header {
+    min-width: 375px;
+  }
+
+  header nav {
+    min-height: 667px;
+  }
+
+  .home {
+    height: 607px;
+  }
+
+  .container {
+    top: 110px;
+  }
+
+  .home h1 {
+    top: 150px;
+  }
+
+  .home h2 {
+    top: 186px;
+    width: 85%;
+  }
+
+  .home h3 {
+    top: 334px;
+  }
+
+  .home a {
+    top: 428px;
+  }
+
+  .about {
+    min-height: 607px;
+  }
+
+  .about p {
+    line-height: 1.5;
+  }
+
+  .projects {
+    min-height: 607px;
+  }
+
+  footer {
+    min-height: 607px;
+  }
+
+  .contact {
+    top: 80px;
+  }
+
+  .contact h1 {
+    top: 160px;
+  }
+
+  .contact h2 {
+    top: 190px;
+  }
+
+  footer p {
+    bottom: -108px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 414px) {
+  header {
+    min-width: 414px;
+  }
+
+  header nav {
+    min-height: 736px;
+  }
+
+  .home {
+    height: 676px;
+  }
+
+  .container {
+    top: 120px;
+    margin-left: 20px;
+  }
+
+  .home h1 {
+    top: 180px;
+    left: 96px;
+  }
+
+  .home h2 {
+    width: 70%;
+    top: 216px;
+    left: 60px;
+  }
+
+  .home h3 {
+    top: 364px;
+    left: 30px;
+  }
+
+  .home a {
+    top: 458px;
+    left: 162px;
+  }
+
+  .about {
+    min-height: 676px;
+  }
+
+  .about p {
+    left: 3px;
+  }
+
+  .about img {
+    margin-top: 648px;
+  }
+
+  footer {
+    min-height: 676px;
+  }
+
+  .contact {
+    height: 510px;
+    top: 84px;
+  }
+
+  .contact h1 {
+    top: 190px;
+  }
+
+  .contact h2 {
+    top: 200px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 375px) and (min-height: 812px) {
+  header {
+    min-width: 375px;
+  }
+
+  header nav {
+    min-height: 812px;
+  }
+
+  .home {
+    height: 752px;
+    background-position: 0px;
+  }
+
+  header ul li {
+    padding: 8%;
+  }
+
+  .container {
+    height: 50%;
+    top: 164px;
+    margin-left: 20px;
+  }
+
+  .home h1 {
+    top: 210px;
+    left: 82px;
+  }
+
+  .home h2 {
+    width: 70%;
+    top: 246px;
+    left: 56px;
+  }
+
+  .home h3 {
+    top: 394px;
+    left: 30px;
+  }
+
+  .home a {
+    top: 488px;
+    left: 146px;
+  }
+
+  .about {
+    min-height: 752px;
+  }
+
+  .about p {
+    left: 3px;
+  }
+
+  .about img {
+    margin-top: 696px;
+  }
+
+  footer {
+    min-height: 752px;
+  }
+
+  .contact {
+    height: 590px;
+    top: 80px;
+  }
+
+  .contact h1 {
+    top: 230px;
+  }
+
+  .contact h2 {
+    top: 240px;
+  }
+
+  footer p {
+    bottom: -104px;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 640px) {
+  .app {
+    max-width: 640px;
+    height: 360px;
+  }
+
+  header {
+    float: left;
+    box-sizing: border-box;
+    width: 33%;
+    height: 100%;
+    padding: 10px;
+    background-color: #000;
+    box-shadow: 0 5px 25px #000;
+  }
+
+  header nav {
+    position: absolute;
+    top: 82px;
+    left: 56px;
+    width: 60%;
+  }
+
+  header ul li {
+    width: 100px;
+    margin-top: 14px;
+    font-size: 24px;
+    text-align: center;
+    list-style: none;
+  }
+
+  header ul li img {
+    width: 40%;
+  }
+
+  .checkbtn {
+    display: none;
+  }
+
+  #check {
+    display: none;
+  }
+
+  .title {
+    width: 100%;
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  .title span {
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  .home {
+    float: left;
+    width: 67%;
+    height: 100%;
+    background-image: url("images/home_horizontal.jpg");
+    background-size: cover;
+  }
+
+  .container {
+    position: absolute;
+    width: 400px;
+    height: 310px;
+    margin-top: 30px;
+    margin-left: 12px;
+    border-radius: 10px;
+    background-color: #000;
+    box-shadow: 10px 10px 20px #000;
+    opacity: 0.5;
+  }
+
+  .home h1 {
+    position: absolute;
+    margin-top: 70px;
+    margin-left: 42px;
+    font-size: 18px;
+    font-weight: normal;
+    text-shadow: 2px 2px 4px #000;
+  }
+
+  .home h2 {
+    position: absolute;
+    width: 300px;
+    margin-top: 100px;
+    margin-left: 42px;
+    font-size: 22px;
+    font-weight: normal;
+    text-shadow: 2px 2px 4px #000;
+  }
+
+  .home h3 {
+    position: absolute;
+    margin-top: 190px;
+    margin-left: 42px;
+    font-size: 16px;
+    font-weight: normal;
+    text-shadow: 2px 2px 4px #000;
+  }
+
+  .home a {
+    position: absolute;
+    margin-top: 280px;
+    margin-left: 42px;
+    color: var(--secondary-color);
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    text-shadow: 2px 2px 4px #000;
+  }
+
+  .about {
+    min-height: 1207px;
+    background-color: #000;
+  }
+
+  .about article {
+    float: left;
+    height: 100%;
+    max-height: 900px;
+    width: 60%;
+  }
+
+  .about h1 {
+    position: absolute;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .about p {
+    position: absolute;
+    width: 90%;
+    margin-top: 60px;
+    margin-left: 5%;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: justify;
+    text-indent: 30px;
+    line-height: 1.5;
+  }
+
+  .about img {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    top: 420px;
+    left: 170px;
+  }
+
+  .projects {
+    min-height: 640px;
+    background-color: #000;
+  }
+
+  .projects-header {
+    width: 100%;
+    height: 30px;
+    padding-bottom: 10px;
+  }
+
+  .projects h1 {
+    position: relative;
+    width: 100%;
+    padding-top: 16px;
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .project {
+    padding-top: 20px;
+    background-color: #000;
+  }
+
+  .projects .project:nth-child(odd) {
+    background-color: #101010;
+  }
+
+  .projects-content {
+    width: 100%;
+  }
+
+  .projects h2 {
+    position: relative;
+    top: -10px;
+    padding: 20px;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .orange-underline {
+    position: relative;
+    width: 300px;
+    height: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    top: -20px;
+    background-color: var(--secondary-color);
+  }
+
+  .projects p {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
+    text-align: justify;
+    line-height: 1.5;
+  }
+
+  .picture {
+    position: relative;
+    width: 100%;
+    top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .project img {
+    display: block;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  footer {
+    min-height: 360px;
+    background-color: var(--secondary-color);
+  }
+
+  .contact {
+    position: relative;
+    box-sizing: border-box;
+    top: 60px;
+    width: 100%;
+    height: 240px;
+    text-align: center;
+    background-color: #000;
+  }
+
+  .contact h1 {
+    position: relative;
+    top: 60px;
+    font-weight: bold;
+  }
+
+  .contact h2 {
+    position: relative;
+    top: 64px;
+    font-weight: normal;
+  }
+
+  footer p {
+    position: relative;
+    display: block;
+    bottom: -71px;
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 667px) {
+  .app {
+    max-width: 667px;
+    height: 375px;
+  }
+
+  header nav {
+    top: 80px;
+    left: 60px;
+  }
+
+  header ul li {
+    margin-top: 14px;
+  }
+
+  .facebook img {
+    margin-left: 76px;
+  }
+
+  .container {
+    width: 420px;
+    height: 328px;
+    margin-top: 26px;
+    margin-left: 13px;
+  }
+
+  .home h1 {
+    margin-top: 78px;
+    margin-left: 50px;
+  }
+
+  .home h2 {
+    margin-top: 108px;
+    margin-left: 50px;
+  }
+
+  .home h3 {
+    margin-top: 198px;
+    margin-left: 50px;
+  }
+
+  .home a {
+    margin-top: 288px;
+    margin-left: 50px;
+  }
+
+  .about {
+    min-height: 1210px;
+    background-color: #000;
+  }
+
+  .about img {
+    top: 390px;
+  }
+
+  .projects {
+    min-height: 375px;
+  }
+
+  footer {
+    min-height: 375px;
+  }
+
+  .contact {
+    top: 64px;
+  }
+
+  .contact h1 {
+    top: 68px;
+  }
+
+  .contact h2 {
+    top: 72px;
+  }
+
+  footer p {
+    bottom: -80px;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 736px) {
+  .app {
+    max-width: 736px;
+    height: 414px;
+  }
+
+  header nav {
+    top: 80px;
+    left: 70px;
+  }
+
+  header ul li {
+    margin-top: 20px;
+  }
+
+  .facebook img {
+    margin-left: 86px;
+  }
+
+  .container {
+    width: 460px;
+    height: 358px;
+  }
+
+  .home h1 {
+    margin-top: 88px;
+  }
+
+  .home h2 {
+    margin-top: 128px;
+  }
+
+  .home h3 {
+    width: 400px;
+    margin-top: 224px;
+  }
+
+  .home a {
+    margin-top: 308px;
+  }
+
+  .about {
+    min-height: 1295px;
+  }
+
+  .about img {
+    left: 182px;
+  }
+
+  .projects {
+    min-height: 414px;
+  }
+
+  footer {
+    min-height: 414px;
+  }
+
+  .contact {
+    top: 88px;
+  }
+
+  .contact h1 {
+    top: 72px;
+  }
+
+  .contact h2 {
+    top: 72px;
+  }
+
+  footer p {
+    bottom: -114px;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 812px) {
+  .app {
+    max-width: 812px;
+    height: 375px;
+  }
+
+  header nav {
+    top: 70px;
+    left: 80px;
+  }
+
+  header ul li {
+    margin-top: 20px;
+  }
+
+  .container {
+    width: 460px;
+    height: 320px;
+    margin-top: 28px;
+    margin-left: 42px;
+  }
+
+  .home h1 {
+    margin-top: 68px;
+    margin-left: 80px;
+  }
+
+  .home h2 {
+    margin-top: 108px;
+    margin-left: 80px;
+  }
+
+  .home h3 {
+    width: 400px;
+    margin-top: 208px;
+    margin-left: 80px;
+  }
+
+  .home a {
+    margin-top: 288px;
+    margin-left: 80px;
+  }
+
+  .about {
+    min-height: 1295px;
+  }
+
+  .about img {
+    top: 330px;
+    left: 202px;
+  }
+
+  .projects {
+    min-height: 414px;
+  }
+
+  footer {
+    max-height: 375px;
+  }
+
+  .contact {
+    top: 88px;
+  }
+
+  .contact h1 {
+    top: 72px;
+  }
+
+  .contact h2 {
+    top: 72px;
+  }
+
+  footer p {
+    bottom: -114px;
+  }
+}
+
+/* Duże ekrany */
+
+@media (orientation: landscape) and (min-width: 1024px) {
+  .app {
+    max-width: 1024px;
+    height: 768px;
+  }
+
+  header {
+    width: 100%;
+    height: 12%;
+    padding: 15px;
+    box-shadow: 0 25px 50px #000;
+  }
+
+  header nav {
+    float: left;
+    position: static;
+    min-width: 74%;
+  }
+
+  header ul {
+    float: right;
+  }
+
+  header ul li {
+    float: left;
+    margin-left: 18px;
+    margin-right: 18px;
+    margin-top: 16px;
+  }
+
+  .title {
+    float: left;
+    width: 20%;
+    margin-top: 8px;
+  }
+
+  .home {
+    width: 100%;
+    height: 88%;
+    background-image: url("images/home_bg.jpg");
+    background-position-x: -140px;
+  }
+
+  .container {
+    width: 600px;
+    height: 500px;
+    margin-top: 90px;
+    margin-left: 70px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 50px #000;
+    opacity: 0.3;
+  }
+
+  .home h1 {
+    margin-top: 200px;
+    margin-left: 130px;
+    font-size: 20px;
+  }
+
+  .home h2 {
+    width: 400px;
+    margin-top: 240px;
+    margin-left: 130px;
+    font-size: 28px;
+  }
+
+  .home h3 {
+    width: 400px;
+    margin-top: 360px;
+    margin-left: 130px;
+    font-size: 14px;
+  }
+
+  .home a {
+    margin-top: 440px;
+    margin-left: 130px;
+    font-size: 14px;
+  }
+
+  .about {
+    clear: both;
+    min-height: 1395px;
+  }
+
+  .about article {
+    margin-top: 0px;
+    width: 100%;
+  }
+
+  .about h1 {
+    position: relative;
+    width: 1024px;
+    top: 20px;
+    font-size: 30px;
+  }
+
+  .about p {
+    position: relative;
+    top: -10px;
+    margin-left: 50px;
+    font-size: 22px;
+  }
+
+  .special {
+    color: var(--secondary-color);
+    font-weight: bold;
+  }
+
+  .about img {
+    display: block;
+    width: 674px;
+    height: 899px;
+    top: 20px;
+    left: 0px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .projects {
+    padding-top: 0px;
+    min-height: 768px;
+  }
+
+  .projects-header {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 0px;
+  }
+
+  .projects h1 {
+    top: 30px;
+    font-size: 32px;
+  }
+
+  .project {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #000;
+  }
+
+  .projects .project:nth-child(odd) {
+    background-color: #101010;
+  }
+
+  .projects-content {
+    width: 100%;
+  }
+
+  .projects h2 {
+    position: relative;
+    top: -10px;
+    padding: 20px;
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .orange-underline {
+    position: relative;
+    width: 300px;
+    height: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    top: -20px;
+    background-color: var(--secondary-color);
+  }
+
+  .projects p {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    text-align: justify;
+    text-indent: 30px;
+    line-height: 1.5;
+  }
+
+  .picture {
+    position: relative;
+    width: 100%;
+    top: 50px;
+    padding-bottom: 60px;
+  }
+
+  .project img {
+    display: block;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  footer {
+    min-height: 900px;
+  }
+
+  .contact {
+    top: 150px;
+    height: 600px;
+  }
+
+  .contact h1 {
+    top: 234px;
+  }
+
+  .contact h2 {
+    top: 238px;
+  }
+
+  footer p {
+    bottom: -208px;
+    font-size: 20px;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 1440px) {
+  .app {
+    min-width: 1440px;
+    height: 900px;
+  }
+
+  header {
+    position: fixed;
+    width: 100%;
+    max-width: 1440px;
+    height: 90px;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;
+  }
+
+  header ul li {
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 0px;
+    font-size: 24px;
+    line-height: 2.5;
+  }
+
+  header ul li img {
+    position: relative;
+    width: 50%;
+    top: 5px;
+  }
+
+  .title {
+    margin-top: 0px;
+    line-height: 1.5;
+  }
+
+  .home {
+    background-position-x: 0px;
+  }
+
+  .container {
+    width: 700px;
+    height: 500px;
+    margin-top: 192px;
+    margin-left: 70px;
+  }
+
+  .home h1 {
+    width: 600px;
+    margin-top: 300px;
+    margin-left: 120px;
+    font-size: 22px;
+  }
+
+  .home h2 {
+    width: 600px;
+    margin-top: 370px;
+    margin-left: 120px;
+    font-size: 30px;
+  }
+
+  .home h3 {
+    width: 600px;
+    margin-top: 480px;
+    margin-left: 120px;
+    font-size: 18px;
+  }
+
+  .home a {
+    margin-top: 570px;
+    margin-left: 120px;
+    font-size: 16px;
+  }
+
+  .about {
+    height: 100%;
+    min-height: 0;
+    max-height: 768px;
+  }
+
+  .about article {
+    float: left;
+    height: 100%;
+    max-height: 900px;
+    width: 60%;
+  }
+
+  .about h1 {
+    position: relative;
+    width: 100%;
+    margin-top: 0px;
+    margin-left: 0px;
+    top: 40px;
+    left: 0px;
+    font-size: 32px;
+  }
+
+  .about p {
+    width: 80%;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: 64px;
+    font-size: 20px;
+    line-height: 2;
+  }
+
+  .photo {
+    float: right;
+    max-width: 40%;
+  }
+
+  .about img {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  .projects {
+    min-height: 900px;
+  }
+
+  .projects h1 {
+    top: 0px;
+    padding: 10px;
+  }
+
+  .project {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .projects-content {
+    float: left;
+    width: 50%;
+  }
+
+  .projects p {
+    font-size: 20px;
+  }
+
+  .picture {
+    float: left;
+    width: 50%;
+    top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .project img {
+    width: 90%;
+  }
+
+  .projects .project:nth-child(even) .projects-content {
+    float: right;
+  }
+
+  footer {
+    max-height: 900px;
+  }
+
+  .contact {
+    top: 160px;
+  }
+
+  .contact h1 {
+    top: 230px;
+  }
+
+  .contact h2 {
+    top: 234px;
+  }
+
+  footer p {
+    bottom: -212px;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 1920px) {
+  .app {
+    min-width: 1920px;
+    height: 977px;
+  }
+
+  header {
+    max-width: 1920px;
+  }
+
+  header ul li {
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 30px;
+    line-height: 2;
+  }
+
+  .title span {
+    font-size: 42px;
+  }
+
+  .container {
+    width: 900px;
+    height: 540px;
+    margin-top: 200px;
+    margin-left: 70px;
+  }
+
+  .home h1 {
+    width: 800px;
+    margin-top: 300px;
+    margin-left: 140px;
+    font-size: 28px;
+  }
+
+  .home h2 {
+    width: 800px;
+    margin-top: 370px;
+    margin-left: 140px;
+    font-size: 36px;
+  }
+
+  .home h3 {
+    width: 800px;
+    margin-top: 490px;
+    margin-left: 140px;
+    font-size: 22px;
+  }
+
+  .home a {
+    margin-top: 590px;
+    margin-left: 140px;
+    font-size: 18px;
+  }
+
+  .about {
+    max-height: 899px;
+  }
+
+  .about h1 {
+    font-size: 36px;
+  }
+
+  .about p {
+    font-size: 24px;
+    line-height: 2;
+  }
+
+  .projects {
+    min-height: 977px;
+  }
+
+  .projects h1 {
+    top: 0px;
+    font-size: 36px;
+  }
+
+  .projects p {
+    font-size: 20px;
+    line-height: 2;
+  }
+
+  .picture {
+    min-height: 580px;
+  }
+
+  footer {
+    min-height: 977px;
+  }
+
+  .contact {
+    top: 190px;
+  }
+
+  .contact h1 {
+    top: 250px;
+  }
+
+  .contact h2 {
+    top: 254px;
+  }
+
+  footer p {
+    bottom: -264px;
+  }
+}

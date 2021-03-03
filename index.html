@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Jakub Czyz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app">
+        <header class="clearfix">
+            <div class="title">
+                <span>Portfolio</span>
+            </div>
+            <nav>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fa fa-bars"></i>
+                </label>
+                <ul>
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">O mnie</a></li>
+                    <li><a href="#projects" class="nav-link">Projekty</a></li>
+                    <li><a href="#contact" class="nav-link">Kontakt</a></li>
+                    <li><a href="https://www.wp.pl/"><img src="images/fb.png" alt="facebook_icon"></a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="home" class="clearfix home">
+            <div class="container"></div>
+            <h1>Cześć, mam na imię Kuba.</h1>
+            <h2>Jestem studentem informatyki i szukam pracy w zawodzie programisty.</h2>
+            <h3>Na tej stronie poznasz kilka informacji o mnie oraz zapoznasz się z moimi projektami, które wykonałem podczas mojej nauki języków programowania.</h3>
+            <a class="text-link" href="#about">Czytaj więcej</a>
+        </section>
+        <section id="about" class="clearfix about">
+            <article>
+                <h1>O mnie</h1>
+                <p>Nazywam się <label class="special">Jakub Czyż</label> i jestem studentem szóstego semestru na Akademii WSB w Cieszynie. Moim kierunkiem jest informatyka o specjalizacjach informatyka przemysłowa oraz programowanie systemów i aplikacje mobilne. Z zawodu jestem technikiem informatykiem. Ukończyłem Zespół Szkół Ekonomiczno-Gastronomicznych w Cieszynie. Aktualnie pracuję jako mechanik w zakładzie produkcyjnym i zajmuję się obsługą oraz naprawą maszyn i urządzeń. Interesuję się programowaniem. Lubię oglądać i czytać artykuły o tematyce naukowej, a w wolnym czasie grać na gitarze i wędrować po górach. Swoją przyszłość chciałbym związać z branzą IT oraz programowaniem aplikacji zarówno po stronie back-end, jak i front-endowej. Myślę, że jestem osobą ambitną, która lubi się uczyć oraz pozyskiwać wiedzę na temat nowych rozwiązań i technologii. Chciałbym zdobyć wymarzoną pracę jako programista i czerpać przyjemność z jej sumiennego wykonywania oraz samego faktu pisania kodu =)</p>
+            </article>
+            <div class="photo">
+                <img src="images/photo.jpg" alt="author">
+            </div>
+        </section>
+        <section id="projects" class="clearfix projects">
+            <div class="projects-header">
+                <h1>Projekty</h1>
+            </div>
+            <div class="project clearfix">
+                <div class="projects-content">
+                    <h2>Wonder Game</h2>
+                    <div class="orange-underline"></div>
+                    <p>Projekt stworzony na potrzeby przedmiotu Software Engineering with OPP realizowanego poczas czwartego semestru moich studiów. Celem mojego projektu było stworzenie gry przeglądarkowej bazującej na znanej i lubianej grze Shakes & Fidget autorstwa Playa Games. W grze tworzymy bohatera, któremu nadajemy imię oraz wygląd, po czym wysyłamy go na misję w celu zdobywania punktów doświadczenia oraz złota, za które gracz może kupować przedmioty przydatne do jego dalszego rozwoju. Ponadto w grze istnieje możliwość walki z innymi graczami oraz przemierzanie lochów w celu zdobywania cennych nagród oraz doświadczenia. Gra ma zaimplementowany prosty system wysyłania wiadomości pomiędzy użytkownikami oraz system rankingowy. Całość projektu została zrealizowana w dwa miesiące za pomocą języka PHP oraz bazy danych MySQL. Skrypty zostały napisane w języku JavaScript, dodatkowo gra posiada możliwość wysyłania oraz odbioru zapytań do bazy danych za pomocą metody XMLHttpRequest bez przeładowywania strony z wykorzystaniem technologii AJAX.</p>
+                </div>
+                <div class="picture">
+                    <img name="slide">
+                </div>
+            </div>
+            <div class="project clearfix"> 
+                <div class="projects-content">
+                    <h2>Łóżko dla chorego</h2>
+                    <div class="orange-underline"></div>
+                    <p>Aplikacja stworzona podczas semestru czwartego w celu zaliczenia przedmiotu Project Computer Applications. Tematem projektu było stworzenie aplikacji medycznej, której zadaniem będzie ułatwienie lub usprawnienie działania służb ratunkowych. Łóżko dla chorego to aplikacja, której zadaniem jest automatyzacja procesu rezerwacji wolnego łóżka dla pacjenta, od chwili zgłoszenia wypadku do momentu dostarczenia pacjenta do wskazanej placówki. Celem programu jest całkowite zniwelowanie zdarzeń, w których pacjenci poprzez błedy ludzkie oraz systemowe zostają skierowani do szpitali, z których są odsyłani do innych placówek z powodu braku wolnych miejsc we wskazanym dla nich szpitalul. Aplikacja Łóżko dla chorego składa się z dwóch osobnych programów. Pierwszym jest REST API, które zostało napisane za pomocą języka JavaScript oraz framework'a Express. Zadaniem API jest odbieranie żądań wysyłanych z aplikacji i zapisywanie ich wyników w bazie danych MongoDB Atlas. Ponadto API posiada możliwość wskazania najbliższego szpitala dla użytkownika wykonując obliczenia według autorskiego algorytmu. Druga część aplikacji została napisana w React i stworzona zgodnie z koncepcją strony Single Page Application. Za pomocą strony użytkownik ma możliwość rejestracji, logowania, dodawania uprawnień, wyboru specjalizacji, dodawania nowych ambulansów, szpitali, zespołów, ratowników, lekarzy oraz dyspozytorów medycznych. Użytkownik zależnie od specjalizacji posiada własny panel zarządzania, którego zadaniem jest spełnianie określonych funkcji w ramach wykonywanego przez niego zawodu.</p>
+                </div>
+                <div class="picture">
+                    <img name="slide2">
+                </div>
+            </div>
+            <div class="project clearfix"> 
+                <div class="projects-content">
+                    <h2>Snake</h2>
+                    <div class="orange-underline"></div>
+                    <p>Projekt gry w wężą w całości zrealizowany samodzielnie przeze mnie za pomocą języka Java. Celem owego projektu było stworzenie aplikacji okienkowej oraz przećwiczenie umięjetności z zakresu programowania obiektowego. Gra posiada możliwość zmiany wyglądu pola gry z kilku dostępnych opcji, zmianę szybkości poruszania węża, możliwość ustawienia większej liczby owoców na planszy, możliwość włączenia lub wyłączenia barier ekranu gry, możliwość włączenia / wyłączenia dźwięku gry oraz zmianę wielkości pola gry. Gra posiada wbudowany również prosty ranking, który odczytuje wyniki z pliku zapisanego na dysku komputera.</p>
+                </div>
+                <div class="picture">
+                    <img name="slide3">
+                </div>
+            </div>
+            <div class="project clearfix"> 
+                <div class="projects-content">
+                    <h2>Kółko i krzyżyk</h2>
+                    <div class="orange-underline"></div>
+                    <p>Gra stworzona w języku Java za pomocą biblioteki graficznej Swing. Jest to prosta implementacja gry w Kółko i krzyżyk stworzona podczas mojej nauki tworzenia graficznego interfejsu użytkownika w języku Java.</p>
+                </div>
+                <div class="picture">
+                    <img name="slide4">
+                </div>
+            </div>
+            <div class="project clearfix"> 
+                <div class="projects-content">
+                    <h2>iOS WeatherApp</h2>
+                    <div class="orange-underline"></div>
+                    <p>Projekt stworzony podczas zajęć z programowania dla urządzeń iOS. Jest to aplikacja, która pobiera aktualną pogodę z zewnętrzenego API na podstawie danych o aktualnym położeniu użytkownika i wyświetla ją na ekranie.</p>
+                </div>
+                <div class="picture">
+                    <img name="slide5">
+                </div>
+            </div>
+            <div class="project clearfix"> 
+                <div class="projects-content">
+                    <h2>Android ToDoApp</h2>
+                    <div class="orange-underline"></div>
+                    <p>Projekt stworzony podczas zajęć z programowania dla urządzeń z systemem Android. Jest to prosta aplikacja, której zadaniem jest gromadzenie zadań od użytkownika i wyświetlanie ich na ekranie. W aplikacji istnieje możliwość ustawienia priorytetu dla zadania, jego edycji oraz usunięcia go z listy. Aplikacja wykorzystuje bazę danych Room.</p>
+                </div>
+                <div class="picture">
+                    <img name="slide6">
+                </div>
+            </div>
+            <div class="project clearfix"> 
+                <div class="projects-content">
+                    <h2>Snake w Python</h2>
+                    <div class="orange-underline"></div>
+                    <p>Projekt stworzony w języku Python. Jest to uboższa wersja gry Snake zmodyfikowana o owoc bonusowy, który pojawia się w losowym czasie. Jego zebranie wiąże się z dodatkową liczbą punktów przyznanych graczowi.</p>
+                </div>
+                <div class="picture">
+                    <img name="slide7">
+                </div>
+            </div>
+        </section>
+        <footer id="contact">
+            <div class="contact">
+                <h1>Jakub Czyż</h1>
+                <h2>Email: jakub_czyz@yahoo.pl</h2>
+                <h2>Telefon: +48 536 878 323</h2>
+            </div>
+            <p>Jakub Czyż 2021<br />
+                Wszelkie prawa zastrzeżone &copy</p>
+        </footer>
+    </div>
+
+    <script src="script.js" type="text/javascript"></script> 
+</body>
+</html>
